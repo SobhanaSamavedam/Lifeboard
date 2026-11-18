@@ -8,16 +8,16 @@
 :root[data-theme=dark]{color-scheme:dark;--bg:#1B1722;--card:#272030;--ink:#F4EBF5;--mut:#CFC1D6;--acc:#F2BFD4;--acct:#2B1631;--line:#3F3449;--soft:#1F1A27;--chip:rgba(255,255,255,.10);--sh:0 2px 16px rgba(0,0,0,.35);--p0:#4A2E40;--p1:#3B3252;--p2:#43365E;--p3:#573346;--p4:#4F3B33;--p5:#2F4538;--p6:#2E405A;--p7:#4C4531;--g1:#4A2E40;--g2:#3B3252;--n0:#4A2E40;--n1:#2F4538;--n2:#3B3252;--n3:#4C4531;--n4:#2E405A}
 *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;overflow-x:hidden;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 #app{max-width:560px;margin:auto;padding:calc(14px + env(safe-area-inset-top,0px)) 16px calc(112px + env(safe-area-inset-bottom,0px))}
-h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;font-weight:600;margin:.2em 0;color:var(--ink)}h1{font-size:31px;line-height:1.15}h2{font-size:25px}h3{font-size:20px}h4{font-size:16px}
+h1,h2,h3,h4{font-family:var(--fh);font-weight:600;margin:.2em 0;color:var(--ink)}h1{font-size:31px;line-height:1.15}h2{font-size:25px}h3{font-size:20px}h4{font-size:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:16px;margin:12px 0;box-shadow:var(--sh);animation:in .35s ease}
 @keyframes in{from{opacity:0;transform:translateY(6px)}}
 .card[class*=" a"],.tile,.hero2{border-color:transparent}
 .a0{background:var(--p0)}.a1{background:var(--p1)}.a2{background:var(--p2)}.a3{background:var(--p3)}.a4{background:var(--p4)}.a5{background:var(--p5)}.a6{background:var(--p6)}.a7{background:var(--p7)}
 .row{display:flex;gap:8px;align-items:center;justify-content:space-between}.row>input{flex:1}.grow{flex:1;min-width:0}
-.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}.brand{font-family:Georgia,serif;letter-spacing:.22em;font-size:14px;font-weight:700;color:var(--ink)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}.brand{font-family:var(--fh);letter-spacing:.22em;font-size:14px;font-weight:700;color:var(--ink)}
 .welcome{border-radius:28px;padding:22px 20px;background:linear-gradient(135deg,var(--g1),var(--g2));box-shadow:var(--sh)}
-.welcome h1{margin:.1em 0 .15em}.hi{margin:0;font-size:15px;color:var(--mut)}.gm{font-family:Georgia,serif;font-size:19px;margin:.3em 0 .6em;color:var(--ink)}
-.qt{border-top:1px solid rgba(53,45,59,.12);padding-top:10px;margin-top:8px}.q{font-family:Georgia,serif;font-size:16px;margin:2px 0}
+.welcome h1{margin:.1em 0 .15em}.hi{margin:0;font-size:15px;color:var(--mut)}.gm{font-family:var(--fh);font-size:19px;margin:.3em 0 .6em;color:var(--ink)}
+.qt{border-top:1px solid rgba(53,45,59,.12);padding-top:10px;margin-top:8px}.q{font-family:var(--fh);font-size:16px;margin:2px 0}
 small,.hint{color:var(--mut);font-size:14px}.sub{color:var(--mut);margin:.1em 0 1em}.sec{margin:22px 0 4px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-family:inherit}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 button{font:inherit;color:var(--ink);cursor:pointer;border:0}
@@ -26,13 +26,13 @@ button{font:inherit;color:var(--ink);cursor:pointer;border:0}
 .ghost{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;flex:1;min-height:48px}
 .mini{background:var(--chip);border:1px solid var(--line);border-radius:14px;min-width:44px;height:44px;font-size:19px;flex:none;display:grid;place-items:center}.mini.on{background:var(--acc);color:var(--acct)}
 .link{background:none;color:var(--acc);padding:10px 0;font-weight:600;text-decoration:underline;text-underline-offset:3px}
-.bar{height:10px;border-radius:9px;background:rgba(53,45,59,.12);overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;border-radius:9px;background:var(--acc);transition:width .6s}
+.bar{height:10px;border-radius:9px;background:rgba(53,45,59,.12);overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;border-radius:9px;background:var(--prog);transition:width .6s}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
 .tile{border-radius:26px;padding:16px 14px;min-height:158px;display:flex;flex-direction:column;gap:3px;cursor:pointer;box-shadow:var(--sh);animation:in .4s ease;transition:transform .15s;word-break:break-word}.tile:active{transform:scale(.97)}
 .tile .ti{font-size:34px;line-height:1.1;margin-bottom:6px}.tile b{font-size:14px;letter-spacing:.07em;text-transform:uppercase}.tile small{font-size:14px;line-height:1.35}.tile em{font-style:normal;font-size:13.5px;margin-top:auto;padding-top:8px;color:var(--ink);opacity:.85}
 .hero2{border-radius:28px;padding:22px 18px;text-align:center;margin:10px 0;box-shadow:var(--sh)}.hero2 .big{font-size:46px}.hero2 p{margin:.2em 0 0;color:var(--mut)}
 .dots{display:flex;justify-content:center;gap:8px;margin-top:12px}.dots span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12px;border:2px solid rgba(53,45,59,.25);color:var(--ink)}.dots span.on{background:var(--acc);color:var(--acct);border-color:var(--acc)}
-.trow{display:flex;gap:12px;align-items:center;cursor:pointer}.ico{font-size:26px;width:48px;height:48px;border-radius:16px;background:var(--chip);display:grid;place-items:center;flex:none}.chev{font-size:22px;color:var(--mut)}
+.trow{display:flex;gap:12px;align-items:center;cursor:pointer}.ico{font-size:26px;width:48px;height:48px;border-radius:16px;background:var(--icobg);display:grid;place-items:center;flex:none}.chev{font-size:22px;color:var(--mut)}
 label{display:block;font-size:14px;color:var(--mut);margin:14px 0 5px}
 input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
 input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);outline-offset:0}::placeholder{color:var(--mut);opacity:.75}
@@ -40,17 +40,37 @@ label.chk{display:flex;gap:12px;align-items:center;font-size:16px;color:var(--in
 input[type=date]{-webkit-appearance:none;appearance:none;min-width:0;max-width:100%;min-height:48px;text-align:left;display:block}
 .seg{display:flex;gap:6px}.seg button{flex:1;background:var(--chip);border:1px solid var(--line);border-radius:14px;padding:12px 4px;font-size:14px}.seg .on{background:var(--acc);color:var(--acct);border-color:var(--acc)}
 .kv{font-size:15px;margin:3px 0;word-break:break-word}.kv b{color:var(--mut);font-weight:600;margin-right:4px}.pv,.card img{max-width:100%;max-height:220px;border-radius:16px;margin-top:8px}
-nav{position:fixed;left:0;right:0;bottom:0;display:flex;gap:2px;justify-content:center;background:color-mix(in srgb,var(--card) 92%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));z-index:5}
-nav button{flex:1;max-width:100px;background:none;color:var(--mut);font-size:11px;letter-spacing:.08em;font-weight:600;padding:6px 2px;border-radius:18px;display:flex;flex-direction:column;align-items:center;gap:3px}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;gap:2px;justify-content:center;background:var(--nav);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));z-index:5}
+nav button{flex:1;max-width:100px;background:none;color:var(--navic);font-size:11px;letter-spacing:.08em;font-weight:600;padding:6px 2px;border-radius:18px;display:flex;flex-direction:column;align-items:center;gap:3px}
 nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}nav button.on{color:var(--ink)}nav button.on i{background:var(--nb)}nav i{width:54px;height:30px;border-radius:15px;display:grid;place-items:center;font-style:normal}
 .ov{position:fixed;inset:0;background:rgba(40,25,45,.45);z-index:10;display:flex;align-items:flex-end;justify-content:center}.sh{background:var(--bg);width:100%;max-width:560px;max-height:90vh;overflow:auto;overflow-x:hidden;border-radius:28px 28px 0 0;padding:20px 16px calc(26px + env(safe-area-inset-bottom,0px));animation:up .25s ease}
 @keyframes up{from{transform:translateY(40px);opacity:0}}.fr{display:flex;gap:6px;margin:6px 0}.fr.off{opacity:.5}
 .toast{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:11px 18px;border-radius:22px;z-index:20;font-size:14.5px;max-width:90vw;text-align:center}
 a{color:var(--acc);font-weight:600}textarea#bk{font-size:12px;height:120px}.dh{touch-action:none;font-size:26px;padding:4px 10px;cursor:grab;user-select:none}
-.phil{text-align:center;font-family:Georgia,serif;color:var(--mut);margin:28px 12px 8px;font-size:16px}
+.phil{text-align:center;font-family:var(--fh);color:var(--mut);margin:28px 12px 8px;font-size:16px}
 .calg{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.cdh{text-align:center;font-size:12.5px;color:var(--mut);padding:4px 0}
 .cd{aspect-ratio:1;border-radius:14px;border:1px solid var(--line);background:var(--card);font-size:15px;position:relative;padding:0}.cd.on{background:var(--p0);font-weight:700}.cd.td{outline:2px solid var(--acc)}.cd.e{visibility:hidden}
 .warn{background:var(--p7)}
+:root{--fh:Georgia,"Times New Roman",serif;--fs:1;--ink0:#352D3B;--prog:#6E3A73;--icobg:rgba(255,255,255,.72);--navic:#665B6D;--nav:color-mix(in srgb,#FFFFFF 92%,transparent)}
+:root[data-theme=dark]{--ink0:#F4EBF5;--prog:#F2BFD4;--icobg:rgba(255,255,255,.10);--navic:#CFC1D6;--nav:color-mix(in srgb,#272030 92%,transparent)}
+#app,.sh{zoom:var(--fs,1)}
+input,select,textarea{color:var(--ink0)}::placeholder{color:var(--mut0,#766B7C)}
+.cc{background:var(--cbg);color:var(--cfg);--ink:var(--cfg);--mut:color-mix(in srgb,var(--cfg) 78%,transparent)}
+:root[data-theme=dark] .cc{background:var(--cdk);color:var(--cfd);--ink:var(--cfd);--mut:color-mix(in srgb,var(--cfd) 78%,transparent)}
+.cc .chip,.cc .mini{color:var(--ink0)}.cc .link{color:inherit}.cc h1,.cc h2,.cc h3,.cc h4,.cc b{color:inherit}
+.welcome.gd{background:linear-gradient(135deg,var(--g1),var(--g2))}.welcome.ctr{text-align:center}.wic{font-size:44px;line-height:1.1;margin-bottom:4px}
+.blk{position:relative}.blk.off{opacity:.6;outline:2px dashed var(--line);outline-offset:4px;border-radius:26px}
+.ebar{display:flex;gap:6px;justify-content:flex-end;align-items:center;margin:14px 0 6px;flex-wrap:wrap}.ebar .mini{height:40px;min-width:40px;font-size:16px}
+.erow{display:flex;gap:6px;width:100%;justify-content:flex-end;flex-wrap:wrap}.trow.ed{flex-wrap:wrap}.trow.ed .erow .mini{height:40px;min-width:40px;font-size:16px}
+.tile{position:relative}.tbar{position:absolute;top:8px;right:8px;display:flex;gap:4px}.tbar .mini{height:36px;min-width:36px;font-size:15px}
+.palc{border:2px solid var(--line);border-radius:20px;padding:12px 14px;background:var(--card);width:100%;text-align:left;margin:6px 0;display:block}.palc.on{border-color:var(--acc)}
+.pal{display:flex;gap:6px;margin:8px 0 4px}.pal i{width:26px;height:26px;border-radius:50%;border:1px solid var(--line)}
+.sty{display:flex;gap:10px;align-items:center;margin:6px 0;flex-wrap:wrap}.sty input[type=color]{width:56px;height:46px;padding:2px;flex:none;border-radius:12px}
+.pvs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}.pvs>div{border-radius:16px;padding:10px 12px;font-size:14px}
+.ok,.wn{font-size:14px;margin:4px 0}.wn{font-weight:700}
+.prevw{position:sticky;top:-20px;z-index:3;background:var(--bg);padding:6px 0 8px;max-height:34vh;overflow:auto;margin-bottom:6px;border-bottom:1px solid var(--line)}.prevw .card,.prevw .welcome,.prevw .tile{margin:0;animation:none}
+.pq{font-family:var(--fh);font-size:18px;margin:8px 0}
+.sticky{position:sticky;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:4}
 </style></head><body><div id="app"></div><nav id="nav"></nav><div id="sheet"></div>
 <script>
 /* ===== LIFEBOARD v2 · single file · data stays in this browser (LocalStorage key: lifeboard_v1) ===== */
@@ -116,6 +136,72 @@ const Q=[['Arise, awake, and stop not till the goal is reached.','Swami Vivekana
 const TYP={t:'Text',a:'Long text',n:'Number',m:'Minutes',c:'Checkbox',y:'Yes / Partially / Not today',l:'Link',d:'Date',i:'Photo'};
 const SW=['Pink','Lavender','Lilac','Rose','Peach','Mint','Sky','Butter'],LIMS=[4,6,8,10,12,16];
 const PRE={goal:{l:'Goal',t:'t'},ideas:{l:'Ideas to try next',t:'a'},notes:{l:'Notes',t:'a'},prog:{l:'Progress (0–100)',t:'n'},done:{l:'Done',t:'c'}};
+/* ===== personalisation engine: colour maths, palettes, fonts, default blocks ===== */
+const clamp=(x,a,b)=>Math.min(b,Math.max(a,x)),isHex=x=>/^#[0-9a-f]{6}$/i.test(x||'');
+function h2r(h){const n=parseInt(h.replace('#',''),16);return[n>>16&255,n>>8&255,n&255]}
+function r2h(r){return'#'+r.map(v=>Math.round(clamp(v,0,255)).toString(16).padStart(2,'0')).join('')}
+function r2hsl([r,g,b]){r/=255;g/=255;b/=255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let h=0,s=0;const l=(mx+mn)/2;if(mx!==mn){const d=mx-mn;s=l>.5?d/(2-mx-mn):d/(mx+mn);h=mx===r?(g-b)/d+(g<b?6:0):mx===g?(b-r)/d+2:(r-g)/d+4;h*=60}return[h,s,l]}
+function hsl2r([h,s,l]){h/=360;const f=(p,q,t)=>{if(t<0)t+=1;if(t>1)t-=1;return t<1/6?p+(q-p)*6*t:t<1/2?q:t<2/3?p+(q-p)*(2/3-t)*6:p};if(!s)return[l*255,l*255,l*255];const q=l<.5?l*(1+s):l+s-l*s,p=2*l-q;return[f(p,q,h+1/3)*255,f(p,q,h)*255,f(p,q,h-1/3)*255]}
+const lum=h=>{const[a,b,c]=h2r(h).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*a+.7152*b+.0722*c};
+const cr=(a,b)=>{const x=lum(a),y=lum(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
+const mixc=(a,b,t)=>{const A=h2r(a),B=h2r(b);return r2h(A.map((v,i)=>v+(B[i]-v)*t))};
+/* dark-mode versions are designed, not inverted: same hue, softer saturation, deep lightness */
+const dkc=h=>{const[H,X,L]=r2hsl(h2r(h));return r2h(hsl2r([H,Math.min(.38,X*.5),.14+.18*L]))};
+const dkAcc=h=>{const[H,X]=r2hsl(h2r(h));return r2h(hsl2r([H,clamp(X,.35,.75),.8]))};
+const dkBg=h=>{const[H,X]=r2hsl(h2r(h));return r2h(hsl2r([H,Math.min(.3,X*.4),.11]))};
+const INK='#352D3B',INKD='#F4EBF5',DKB='#1B1722';
+const autoFg=(bg,dark)=>dark?(cr(bg,INKD)>=cr(bg,DKB)?INKD:DKB):(cr(bg,INK)>=cr(bg,'#FFFFFF')?INK:'#FFFFFF');
+const PAL=[
+{id:'pinklav',name:'Pink & Lavender',note:'The default. Soft, bright and calm.',bg:'#FFF9F7',acc:'#6E3A73',p:['#F8DCE8','#E9DDF8','#DCCDF3','#F2BFD4','#FFE5D3','#DDF0E5','#DFEBF9','#FFF0C9'],d:{bg:'#1B1722',acc:'#F2BFD4',p:['#4A2E40','#3B3252','#43365E','#573346','#4F3B33','#2F4538','#2E405A','#4C4531']}},
+{id:'peachrose',name:'Peach & Rose',note:'Warm apricot, blush and rose.',bg:'#FFF8F3',acc:'#9A3B4E',p:['#FFE5D3','#F5C6D0','#FADADD','#FFD9B8','#FFF0C9','#EBCFE0','#E9DDF8','#DDF0E5']},
+{id:'mintsky',name:'Mint & Sky',note:'Fresh, light and airy.',bg:'#F6FBF9',acc:'#2F6B6B',p:['#DDF0E5','#DFEBF9','#E4F4F1','#D3E8F5','#FFF0C9','#E9DDF8','#F8DCE8','#FFE5D3']},
+{id:'lilacdream',name:'Lilac Dream',note:'Lavender, lilac and gentle plum.',bg:'#FAF7FF',acc:'#5B3F8C',p:['#E9DDF8','#DCCDF3','#D8D4F5','#EFD9F5','#F8DCE8','#DFEBF9','#DDF0E5','#FFF0C9']},
+{id:'butterblush',name:'Butter & Blush',note:'Sunny butter with pink warmth.',bg:'#FFFBF2',acc:'#8A5A12',p:['#FFF0C9','#FFE5D3','#F8DCE8','#FBE3C5','#F2BFD4','#DDF0E5','#DFEBF9','#E9DDF8']}];
+const palOf=id=>PAL.find(p=>p.id===id)||PAL[0];
+const FONTS={serif:['Classic serif','Georgia,"Times New Roman",serif'],classic:['Elegant serif','"Palatino Linotype",Palatino,"Book Antiqua",serif'],sans:['Clean sans','-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif'],round:['Soft rounded','ui-rounded,"SF Pro Rounded",Nunito,"Trebuchet MS",system-ui,sans-serif']};
+const SIZES=[['Comfortable',1],['Large',1.12],['Extra large',1.25]];
+function themeVars(src,dark){const pal=palOf(src.pal),tc=src.tc||{},d=pal.d||{},p=pal.p;let v={};
+ if(!dark){const bg=tc.bg||pal.bg,ink=tc.ink||INK,acc=tc.btn||pal.acc;
+  v={'--bg':bg,'--card':'#FFFFFF','--ink':ink,'--ink0':ink,'--mut':tc.ink?mixc(ink,bg,.25):'#665B6D','--acc':acc,'--acct':autoFg(acc),'--line':(tc.bg||tc.ink)?mixc(bg,ink,.12):'#EBDDE6','--soft':'#FFFFFF','--chip':'rgba(255,255,255,.72)','--prog':tc.prog||acc,'--nav':tc.nav||'color-mix(in srgb,#FFFFFF 92%,transparent)','--icobg':tc.icon||'rgba(255,255,255,.72)'};
+  v['--navic']=tc.icon?mixc(tc.icon,INK,.45):v['--mut'];p.forEach((c,i)=>v['--p'+i]=c)}
+ else{const bg=tc.bg?dkBg(tc.bg):(d.bg||dkBg(pal.bg)),card=mixc(bg,'#FFFFFF',.07),acc=tc.btn?dkAcc(tc.btn):(d.acc||dkAcc(pal.acc));
+  v={'--bg':bg,'--card':card,'--ink':INKD,'--ink0':INKD,'--mut':'#CFC1D6','--acc':acc,'--acct':autoFg(acc,true),'--line':mixc(bg,'#FFFFFF',.16),'--soft':mixc(bg,card,.5),'--chip':'rgba(255,255,255,.10)','--prog':tc.prog?dkAcc(tc.prog):acc,'--nav':tc.nav?dkc(tc.nav):'color-mix(in srgb,'+card+' 92%,transparent)','--icobg':tc.icon?dkc(tc.icon):'rgba(255,255,255,.10)','--navic':tc.icon?dkAcc(tc.icon):'#CFC1D6'};
+  (d.p||p.map(dkc)).forEach((c,i)=>v['--p'+i]=c)}
+ v['--g1']=v['--p0'];v['--g2']=v['--p1'];v['--n0']=v['--p0'];v['--n1']=v['--p5'];v['--n2']=v['--p1'];v['--n3']=v['--p7'];v['--n4']=v['--p6'];return v}
+const cssOf=v=>Object.entries(v).map(([k,x])=>k+':'+x).join(';');
+function applyTheme(src){const ty=src.ty||{},f=(FONTS[ty.head]||FONTS.serif)[1];let el=document.getElementById('thm');if(!el){el=document.createElement('style');el.id='thm';document.head.appendChild(el)}
+ el.textContent=':root{'+cssOf(themeVars(src,false))+';--fh:'+f+';--fs:'+(ty.size||1)+'}:root[data-theme=dark]{'+cssOf(themeVars(src,true))+'}'}
+/* per-element colours: a swatch index, or a custom {bg,fg} with an automatically designed dark version */
+const csv=(bg,fg)=>{const f=isHex(fg)?fg:autoFg(bg),db=dkc(bg);return `style="--cbg:${bg};--cdk:${db};--cfg:${f};--cfd:${autoFg(db,true)}"`};
+function sty(o,def){if(o.col&&isHex(o.col.bg))return['cc',csv(o.col.bg,o.col.fg)];const a=(o.a!==undefined&&o.a!==null)?o.a:def;return[a>=0?'a'+a:'','']}
+const EMO=['🌿','🌸','🌼','🌙','☀️','✨','💞','🪷','🕊','🎨','📖','💡','🌈','🍫','🙏','🧘','💃','😄','☕','🌅'];
+const GREETS=['Welcome to your space.','Hello, beautiful soul!','Good morning, {name}!','My Morning Space','A new day, a new possibility.','Hello, {name}'];
+const DP=['What am I most grateful for right now?','What would make today feel kind to myself?','Who do I want to appreciate today?','What small thing would make today meaningful?','What am I learning about myself lately?','What does my body need today?','What would I like to create or explore?'];
+const DBL=()=>[
+{id:'welcome',type:'welcome',hide:0,title:'Welcome to your space.',msgs:MSG.slice(),mode:'daily',align:'left',size:'m',showDate:1,showHi:1,icon:'',a:-1},
+{id:'inspire',type:'inspire',hide:0,title:'A thought for today',icon:'💬',a:1,src:'all'},
+{id:'intent',type:'intent',hide:0,title:'Today, I want to…',icon:'',a:7,n:2,ph:['Be patient','Listen without interrupting','Eat mindfully'],note:'One or two is plenty. Entirely optional.'},
+{id:'cards',type:'cards',hide:0,title:'My LIFEBOARD'},
+{id:'closing',type:'reflect',hide:0,title:'Before you go…',desc:'',icon:'',a:0,link:1,qs:[{id:'smile',q:'What made you smile?'},{id:'grat',q:'What are you grateful for?'},{id:'diff',q:'What would you like to do differently tomorrow?'}]},
+{id:'prompt',type:'prompt',hide:1,title:'A gentle question',icon:'🌼',a:4}];
+const BDEF={welcome:-1,intent:7,inspire:1,reflect:0,prompt:4,note:5,cards:0};
+const BT={welcome:'Welcome',intent:'Daily intention',inspire:'Daily inspiration',cards:'My cards',reflect:'Reflection card',prompt:'Daily question',note:'Note'};
+const DEFNAV=()=>({order:['home','health','growth','ideas','more'],label:{home:'Home',health:'Health',growth:'Growth',ideas:'Ideas',more:'More'},title:{},sub:{},emo:{},hide:{},labels:1});
+function normNav(n){const d=DEFNAV();n=n||d;n.order=(n.order||[]).filter(x=>d.order.includes(x));d.order.forEach(x=>{if(!n.order.includes(x))n.order.push(x)});n.label=Object.assign({},d.label,n.label||{});n.title=n.title||{};n.sub=n.sub||{};n.emo=n.emo||{};n.hide=n.hide||{};if(n.labels===undefined)n.labels=1;return n}
+const DD={};D.forEach(d=>DD[d[0]]=d);
+const newId=()=>'b'+Date.now().toString(36)+Math.floor(Math.random()*99);
+const RND=Math.floor(Math.random()*1000);
+/* sections keep a personal order inside each card or area */
+const ordered=(key,arr)=>{const o=S.ord[key]||[];return arr.slice().sort((a,b)=>{const x=o.indexOf(a[0]),y=o.indexOf(b[0]);return(x<0?999:x)-(y<0?999:y)})};
+
+const PHIL='Notice your life.\nNurture your growth.\nCelebrate your small moments.';
+
+function pers0(s,old){if(old<6||s.th===undefined)s.th='dark';
+ s.pal=PAL.some(p=>p.id===s.pal)?s.pal:'pinklav';s.tc=s.tc||{};s.ty=s.ty||{};
+ if(!Array.isArray(s.home)||!s.home.length)s.home=DBL();
+ s.home=s.home.filter(b=>b&&b.id&&BT[b.type]);if(!s.home.some(b=>b.type==='cards'))s.home.push(DBL().find(b=>b.type==='cards'));
+ s.nv=normNav(s.nv);s.prompts=Array.isArray(s.prompts)?s.prompts:DP.slice();s.pa=s.pa||{};s.qs=Object.assign({src:'all',rot:'daily'},s.qs||{});s.ord=s.ord||{};if(s.phil===undefined)s.phil=PHIL;
+ s.v=1;s.m=6;return s}
 let S,V={tab:'home',tr:null,card:null,flt:'all',rp:'week',q:'',st:[],day:null,rc:'',rd:'',cm:null},cb=null,NF=[],AC=0,CE=null;
 /* ---------- data: load, migrate, save ---------- */
 function mk(d){const df=d[6].split(';').map(x=>{const a=x.split(':');return{k:a[0],l:a[1],t:a[2],o:a[3]||'',h:0}});return df}
@@ -123,9 +209,9 @@ function init(s){const old=s.m||1;s.tr=s.tr||{};s.e=s.e||[];
  D.forEach(d=>{const df=mk(d),t=s.tr[d[0]];if(!t){const cs=(DEFC[d[0]]||[]).slice();s.tr[d[0]]={n:d[1],i:d[2],tab:d[3],tabs:[d[3]],cat:cs[0]||'',cats:cs,ess:d[5],pin:0,hide:0,f:df}}else df.forEach(f=>{const x=t.f.find(y=>y.k===f.k);if(!x)t.f.push(f);else if(old<3&&(d[0]==='ideas'||f.k==='kind'||(d[0]==='archive'&&f.k==='cat')))x.l=f.l})});
  if(!s.tr.naam)s.tr.naam={n:'Naam Jap counter',i:'🕉',tab:'growth',tabs:['growth'],cat:'pc',cats:['pc'],ess:0,pin:0,hide:0,sp:'naam',f:[]};
  Object.entries(s.tr).forEach(([k,t])=>{if(!t.tabs)t.tabs=[t.tab];if(old<5){const c=t.cat;if(typeof c==='string'&&c[0]==='u')t.cats=[c];else if(DEFC[k])t.cats=DEFC[k].slice();else t.cats=[OLDNM[c]||'mi']}if(!t.cats)t.cats=[];t.cat=t.cats[0]||''});
- if(old<5){const keep=(s.cards||[]).filter(c=>String(c.id)[0]==='u');s.cards=DC.map(c=>({...c,hide:0,pin:0})).concat(keep);if(s.th===undefined||s.th==='auto')s.th='light'}
+ if(old<5){const keep=(s.cards||[]).filter(c=>String(c.id)[0]==='u');s.cards=DC.map(c=>({...c,hide:0,pin:0})).concat(keep);}
  if(!s.cards)s.cards=DC.map(c=>({...c,hide:0,pin:0}));
- if(s.lim===undefined)s.lim=0;s.int=s.int||{};s.cl=s.cl||{};s.wr=s.wr||{};s.nj=s.nj||{};s.hc=s.hc||[];s.fq=s.fq||[];s.cq=s.cq||[];s.name=s.name||'Sobhana';s.v=1;s.m=5;return s}
+ if(s.lim===undefined)s.lim=0;s.int=s.int||{};s.cl=s.cl||{};s.wr=s.wr||{};s.nj=s.nj||{};s.hc=s.hc||[];s.fq=s.fq||[];s.cq=s.cq||[];s.name=s.name||'Sobhana';return pers0(s,old)}
 function load(){try{const j=JSON.parse(localStorage.getItem('lifeboard_v1'));if(j&&j.v===1&&j.tr&&j.e)return init(j)}catch(e){}return init({v:1,name:'Sobhana',tr:{},e:[]})}
 function save(){try{localStorage.setItem('lifeboard_v1',JSON.stringify(S))}catch(e){toast('Could not save (storage full or blocked). Please export a backup.')}}
 let SOK=true;try{localStorage.setItem('lb_t','1');localStorage.removeItem('lb_t')}catch(e){SOK=false}
@@ -138,45 +224,105 @@ const cid=v=>isNaN(v)||v===''?v:+v,gc=id=>S.cards.find(c=>String(c.id)===String(
 const ac=t=>{const c=gc((t.cats||[])[0]);return c?c.a:({health:5,growth:1,ideas:7,more:6}[t.tab]??0)};
 const ordCards=()=>S.cards.filter(c=>c.pin).concat(S.cards.filter(c=>!c.pin));
 const cts=id=>Object.entries(S.tr).filter(([k,t])=>!t.hide&&inCard(t,id));
-function theme(){const dk=S.th==='dark'||(S.th==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dk?'dark':'light'}
+function theme(){const dk=S.th==='dark'||(S.th==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dk?'dark':'light';applyTheme(TD||S)}
 try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(S&&S.th==='auto')theme()})}catch(e){}
 const thc=()=>['light','dark','auto'].map(x=>`<button class="chip ${S.th===x?'on':''}" data-a=th data-id=${x}>${x==='light'?'☀ Light':x==='dark'?'☾ Dark':'Match phone'}</button>`).join('');
-function dq(){const all=Q.concat(S.cq),n=dayN(),pool=all.filter(q=>q[2]===(n%2?'m':'p'));return pool.length?pool[Math.floor(n/2)%pool.length]:all[0]}
+function dq(src){src=src||S.qs.src;const all=Q.concat(S.cq);if(src==='all'&&S.qs.rot!=='random'){const n=dayN(),pool=all.filter(q=>q[2]===(n%2?'m':'p'));return pool.length?pool[Math.floor(n/2)%pool.length]:all[0]}const pool=src==='fav'?all.filter(q=>S.fq.includes(q[0])):src==='mine'?S.cq:all;if(!pool.length)return null;return pool[(S.qs.rot==='random'?RND:dayN())%pool.length]}
 const qrow=q=>`<div class=q>“${esc(q[0])}”</div><div class=row><small>— ${esc(q[1])}</small><button class="mini ${S.fq.includes(q[0])?'on':''}" data-a=qfav data-q="${esc(q[0])}" aria-label="Favourite">♥</button></div>`;
 const back=(t,c)=>`<div class=row><button class=mini data-a=back aria-label="Back">‹</button><h2 style="flex:1;margin-left:8px">${t}</h2>${c||''}</div>`;
 function dotsFor(ks){return `<div class=dots>${[...Array(7)].map((_,i)=>{const k=ago(6-i),on=S.e.some(e=>e.d===k&&ks.includes(e.t));return `<span class="${on?'on':''}" title="${k}">${new Date(k+'T12:00:00').toLocaleDateString('en',{weekday:'narrow'})}</span>`}).join('')}</div>`}
-/* ---------- HOME ---------- */
-function home(){const d=new Date(),k=ymd(),h=d.getHours(),g=h<12?'Good morning':h<18?'Good afternoon':'Good evening',all=ordCards().filter(c=>!c.hide),cs=S.lim>0?all.slice(0,S.lim):all,it=S.int[k]||[],cl=S.cl[k]||{};
- return `<div class=top><span class=brand>LIFEBOARD</span><button class=mini data-a=quick aria-label="Add a moment">＋</button></div>
- <div class=welcome><small>${d.toLocaleDateString('en',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</small><h1>Welcome to your space.</h1><p class=hi>${g}, ${esc(S.name)}</p><p class=gm>${MSG[dayN()%MSG.length]}</p><div class=qt>${qrow(dq())}</div></div>
- <div class="card a7"><h3>Today, I want to…</h3><input data-u=int data-i=0 value="${esc(it[0]||'')}" placeholder="Be patient" maxlength=140 aria-label="Intention one"><input data-u=int data-i=1 value="${esc(it[1]||'')}" placeholder="Listen without interrupting" maxlength=140 style="margin-top:8px" aria-label="Intention two"><small>One or two is plenty. Entirely optional.</small></div>
- <div class=row style="margin-top:20px"><h3>My LIFEBOARD</h3><button class=btn style="flex:none;padding:10px 16px;min-height:44px" data-a=newcard>＋ Add card</button></div>
- ${cs.length?`<div class=grid>${cs.map(c=>{const n=cts(c.id).map(x=>x[0]),te=S.e.filter(e=>e.d===k&&n.includes(e.t)).length;return `<div class="tile a${c.a}" data-a=ocard data-id=${c.id} role=button tabindex=0><span class=ti>${c.i}</span><b>${esc(c.n)}</b><small>${esc(c.d)}</small><em>${te?te+' recorded today':'Open when you’re ready'}</em></div>`}).join('')}</div>`:'<div class=card><p>No cards are showing right now.</p><p class=hint>Open the card library to bring some back, or add a new one.</p></div>'}
- <div class=row style="margin-top:12px"><button class=ghost data-a=open data-id=lib>${all.length>cs.length?`View all ${all.length} cards`:'Card library & layout'}</button></div>
- <div class="card a0"><h3>Before you go…</h3><label>What made you smile?</label><textarea rows=2 data-u=cl data-k=smile placeholder="Optional">${esc(cl.smile||'')}</textarea><label>What are you grateful for?</label><textarea rows=2 data-u=cl data-k=grat placeholder="Optional">${esc(cl.grat||'')}</textarea><label>What would you like to do differently tomorrow?</label><textarea rows=2 data-u=cl data-k=diff placeholder="Optional">${esc(cl.diff||'')}</textarea><small>Saved quietly on this device.</small><br><button class=link data-a=open data-id=ritual>Open the full closing ritual ›</button></div>
- ${S.e.length?'':`<div class=card><b>Just exploring?</b><br><small>You can add a few sample moments to look around. Remove them any time.</small><br><button class=chip style="margin-top:8px" data-a=sample>Add sample moments</button></div>`}
- <p class=phil>Notice your life.<br>Nurture your growth.<br>Celebrate your small moments.</p>`}
+/* ---------- HOME (made of blocks you can edit, reorder, hide and add) ---------- */
+const greet=()=>{const h=new Date().getHours();return h<12?'Good morning':h<18?'Good afternoon':'Good evening'};
+const fillT=s=>String(s||'').replace(/\{name\}/g,S.name).replace(/\{greeting\}/g,greet());
+const hd=b=>`<h3>${b.icon?esc(b.icon)+' ':''}${esc(fillT(b.title))}</h3>`+(b.desc?`<small>${esc(b.desc)}</small>`:'');
+const curPrompt=()=>{const ps=(S.prompts||[]).filter(Boolean);return ps.length?ps[(dayN()+(V.pi||0))%ps.length]:''};
+function welcomeB(b){const d=new Date(),[c,s]=sty(b,-1),ms=(b.msgs||[]).filter(Boolean),m=ms.length?(b.mode==='static'?ms[0]:b.mode==='random'?ms[RND%ms.length]:ms[dayN()%ms.length]):'',fz={s:'24px',m:'31px',l:'38px'}[b.size]||'31px';
+ return `<div class="welcome ${c||'gd'} ${b.align==='center'?'ctr':''}" ${s}>${b.icon?`<div class=wic>${esc(b.icon)}</div>`:''}${b.showDate!==0?`<small>${d.toLocaleDateString('en',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</small>`:''}<h1 style="font-size:${fz}">${esc(fillT(b.title))}</h1>${b.showHi!==0?`<p class=hi>${greet()}, ${esc(S.name)}</p>`:''}${m?`<p class=gm>${esc(fillT(m))}</p>`:''}</div>`}
+function intentB(b,pv){const it=S.int[ymd()]||[],n=b.n||2,[c,s]=sty(b,7);return `<div class="card ${c}" ${s}>${hd(b)}${[...Array(n)].map((_,i)=>`<input ${pv?'disabled':`data-u=int data-i=${i}`} value="${esc(it[i]||'')}" placeholder="${esc((b.ph||[])[i]||'')}" maxlength=140 ${i?'style="margin-top:8px"':''} aria-label="Intention ${i+1}">`).join('')}${b.note?`<small>${esc(b.note)}</small>`:''}</div>`}
+function inspireB(b){const q=dq(b.src),[c,s]=sty(b,1);return `<div class="card ${c}" ${s}>${hd(b)}${q?qrow(q):'<small>No quotes match yet. Add some in Personalise › Daily prompts & quotes.</small>'}</div>`}
+function reflectB(b,pv){const cl=S.cl[ymd()]||{},[c,s]=sty(b,0);return `<div class="card ${c}" ${s}>${hd(b)}${(b.qs||[]).filter(q=>!q.h).map(q=>`<label>${esc(q.q)}</label><textarea rows=2 ${pv?'disabled':`data-u=cl data-k=${q.id}`} placeholder="Optional">${esc(cl[q.id]||'')}</textarea>`).join('')}<small>Optional. Saved quietly on this device, by date.</small>${b.link&&!pv?`<br><button class=link data-a=open data-id=ritual>Open the full closing ritual ›</button>`:''}</div>`}
+function promptB(b,pv){const [c,s]=sty(b,4),q=curPrompt(),a=(S.pa[ymd()]||{})[q]||'';
+ return `<div class="card ${c}" ${s}>${hd(b)}${q?`<p class=pq>${esc(q)}</p><textarea rows=3 ${pv?'disabled':'data-u=pa'} placeholder="Optional">${esc(a)}</textarea><div class=row><small>Optional. Saved by date.</small>${pv?'':'<button class=link data-a=pnext>Another question</button>'}</div>`:'<small>Add questions in Personalise › Daily prompts & quotes.</small>'}</div>`}
+function noteB(b){const [c,s]=sty(b,5);return `<div class="card ${c}" ${s}>${hd(b)}<p style="white-space:pre-wrap;margin:.4em 0">${esc(fillT(b.text||''))}</p></div>`}
+function cardsB(b,pv){const k=ymd(),all=ordCards().filter(c=>!c.hide),cs=S.lim>0?all.slice(0,S.lim):all;
+ return `<div class=row style="margin-top:20px"><h3>${esc(fillT(b.title))}</h3>${pv?'':'<button class=btn style="flex:none;padding:10px 16px;min-height:44px" data-a=newcard>＋ Add card</button>'}</div>
+ ${cs.length?`<div class=grid>${cs.map(c=>{const n=cts(c.id).map(x=>x[0]),te=S.e.filter(e=>e.d===k&&n.includes(e.t)).length,[cc,cs2]=sty(c,c.a);return `<div class="tile ${cc}" ${cs2} data-a=ocard data-id=${c.id} role=button tabindex=0>${V.edit&&!pv?`<div class=tbar><button class=mini data-a=editcard data-id=${c.id} aria-label="Edit card">✎</button><button class=mini data-a=hidecat data-id=${c.id} aria-label="Hide card">−</button></div>`:''}<span class=ti>${esc(c.i)}</span><b>${esc(c.n)}</b><small>${esc(c.d)}</small><em>${te?te+' recorded today':'Open when you’re ready'}</em></div>`}).join('')}</div>`:'<div class=card><p>No cards are showing right now.</p><p class=hint>Open the card library to bring some back, or add a new one.</p></div>'}
+ ${pv?'':`<div class=row style="margin-top:12px"><button class=ghost data-a=open data-id=lib>${all.length>cs.length?`View all ${all.length} cards`:'Card library & layout'}</button></div>`}`}
+const BODY={welcome:welcomeB,intent:intentB,inspire:inspireB,reflect:reflectB,prompt:promptB,note:noteB,cards:cardsB};
+const blkBody=(b,pv)=>BODY[b.type]?BODY[b.type](b,pv):'';
+const ebar=b=>`<div class=ebar><small style="margin-right:auto">${BT[b.type]}${b.hide?' · hidden':''}</small><button class=mini data-a=bup data-id=${b.id} aria-label="Move up">↑</button><button class=mini data-a=bdn data-id=${b.id} aria-label="Move down">↓</button><button class=mini data-a=bed data-id=${b.id} aria-label="Edit">✎</button><button class=mini data-a=bhide data-id=${b.id} aria-label="${b.hide?'Show':'Hide'}">${b.hide?'＋':'−'}</button></div>`;
+function home(){let h=`<div class=top><span class=brand>LIFEBOARD</span><span style="display:flex;gap:8px"><button class="mini ${V.edit?'on':''}" data-a=etog aria-label="Edit home screen">✎</button><button class=mini data-a=quick aria-label="Add a moment">＋</button></span></div>`;
+ if(V.edit)h+=`<div class="card a7"><b>Editing your home</b><br><small>Move, edit, hide or show any block. Nothing is lost.</small><div class=chips><button class=chip data-a=addblk>＋ Add block</button><button class=chip data-a=open data-id=pers>Personalise…</button><button class="chip on" data-a=etog>Done</button></div></div>`;
+ S.home.forEach(b=>{if(b.hide&&!V.edit)return;h+=`<section class="blk ${b.hide?'off':''}">${V.edit?ebar(b):''}${blkBody(b)}</section>`});
+ if(!S.home.some(b=>!b.hide))h+='<div class=card><p>Your home screen is empty right now.</p><button class=chip data-a=etog>Edit home</button></div>';
+ if(!S.e.length)h+=`<div class=card><b>Just exploring?</b><br><small>You can add a few sample moments to look around. Remove them any time.</small><br><button class=chip style="margin-top:8px" data-a=sample>Add sample moments</button></div>`;
+ return h+(S.phil?`<p class=phil style="white-space:pre-line">${esc(S.phil)}</p>`:'')}
+
 /* ---------- CARD PAGE ---------- */
-const secRow=(k,t,rm)=>{const te=S.e.filter(e=>e.t===k&&e.d===ymd()),m=te.reduce((a,e)=>a+mins(t,e),0),sub=t.sp==='naam'?`${S.nj[ymd()]||0} today`:`${te.length?te.length+' recorded today':'Whenever you’re ready'}${m?' · '+m+' min':''}`;
- return `<div class="card trow a${ac(t)}" data-a=open data-sw=${k} data-id=${k}><div class=ico>${t.i}</div><div class=grow><b>${esc(t.n)}</b><br><small>${sub}</small></div>${t.sp==='naam'?`<button class=mini data-a=njp aria-label="Add one">+1</button>`:`<button class=mini data-a=add data-id=${k} aria-label="New entry">＋</button>`}<button class=mini data-a=${rm} data-id=${k} aria-label="Remove from here">−</button></div>`};
-function cardPage(id){const c=gc(id);if(!c)return home();const ts=cts(id),ks=ts.map(x=>x[0]),wkN=S.e.filter(e=>e.d>=ago(6)&&ks.includes(e.t)),wm=wkN.reduce((a,e)=>a+mins(S.tr[e.t],e),0);
+function tp(t,k){if(t.col&&isHex(t.col.bg))return sty(t,0);if(t.a>=0)return sty(t,0);const tc=(TD||S).tc||{},c=k==='people'&&tc.prof?tc.prof:t.tab==='ideas'&&tc.ideas?tc.ideas:tc.inner;if(c)return sty({col:{bg:c}},0);return['a'+ac(t),'']}
+const edBtn=()=>`<button class="chip ${V.edit?'on':''}" data-a=etog>${V.edit?'Done editing':'✎ Edit sections'}</button>`;
+const secRow=(k,t,rm,key)=>{const te=S.e.filter(e=>e.t===k&&e.d===ymd()),m=te.reduce((a,e)=>a+mins(t,e),0),sub=t.d?esc(t.d):(t.sp==='naam'?`${S.nj[ymd()]||0} today`:`${te.length?te.length+' recorded today':'Whenever you’re ready'}${m?' · '+m+' min':''}`),[c,s]=tp(t,k);
+ const mv=d=>`<button class=mini data-a=smv data-id=${k} data-key="${key}" data-d=${d} aria-label="${d<0?'Move up':'Move down'}">${d<0?'↑':'↓'}</button>`;
+ return `<div class="card trow ${c} ${V.edit?'ed':''}" ${s} data-a=open data-sw=${k} data-id=${k}><div class=ico>${esc(t.i)}</div><div class=grow><b>${esc(t.n)}</b><br><small>${sub}</small></div>${V.edit?`<div class=erow><button class=mini data-a=sed data-id=${k} aria-label="Edit section">✎</button>${mv(-1)}${mv(1)}<button class=mini data-a=${rm} data-id=${k} aria-label="Remove from here">−</button></div>`:`${t.sp==='naam'?`<button class=mini data-a=njp aria-label="Add one">+1</button>`:`<button class=mini data-a=add data-id=${k} aria-label="New entry">＋</button>`}<button class=mini data-a=${rm} data-id=${k} aria-label="Remove from here">−</button>`}</div>`};
+function cardPage(id){const c=gc(id);if(!c)return home();const ts=ordered('c:'+id,cts(id)),ks=ts.map(x=>x[0]),wkN=S.e.filter(e=>e.d>=ago(6)&&ks.includes(e.t)),wm=wkN.reduce((a,e)=>a+mins(S.tr[e.t],e),0),[cc,cs]=sty(c,c.a);
  return `<div class=row><button class=mini data-a=back aria-label="Back">‹</button><span style="display:flex;gap:8px"><button class=mini data-a=editcard data-id=${c.id} aria-label="Edit card">✎</button><button class=mini data-a=hidecat data-id=${c.id} aria-label="Hide card">−</button></span></div>
- <div class="hero2 a${c.a}"><div class=big>${c.i}</div><h2 style="text-transform:uppercase;letter-spacing:.08em;font-size:22px">${esc(c.n)}</h2><p>${esc(c.d)}</p>${dotsFor(ks)}<small>${wkN.length?`This week: ${wkN.length} moment${wkN.length==1?'':'s'} recorded${wm?' · '+wm+' min':''}`:'A quiet week here, and that is fine.'}</small></div>
+ <div class="hero2 ${cc}" ${cs}><div class=big>${esc(c.i)}</div><h2 style="text-transform:uppercase;letter-spacing:.08em;font-size:22px">${esc(c.n)}</h2><p>${esc(c.d)}</p>${dotsFor(ks)}<small>${wkN.length?`This week: ${wkN.length} moment${wkN.length==1?'':'s'} recorded${wm?' · '+wm+' min':''}`:'A quiet week here, and that is fine.'}</small></div>
  <div class=row style="margin-top:18px"><h3>Sections</h3><button class=btn style="flex:none;padding:10px 16px;min-height:44px" data-a=addsec data-card=${c.id}>＋ Add section</button></div>
- <small>Tap − (or swipe left) to tuck a section away. Nothing is deleted.</small>
- ${ts.map(([k,t])=>secRow(k,t,'rmcard')).join('')||'<div class=card><p>This card is empty for now.</p><p class=hint>Use ＋ Add section to bring in a section or create your own.</p></div>'}`}
+ <div class=chips style="margin:6px 0">${edBtn()}</div><small>Tap − (or swipe left) to tuck a section away. Nothing is deleted.</small>
+ ${ts.map(([k,t])=>secRow(k,t,'rmcard','c:'+id)).join('')||'<div class=card><p>This card is empty for now.</p><p class=hint>Use ＋ Add section to bring in a section or create your own.</p></div>'}`}
 /* ---------- TAB PAGES ---------- */
-function tabp(tab){if(tab==='more')return more();const ts=Object.entries(S.tr).filter(([k,t])=>inTab(t,tab)&&!t.hide);
- return `<div class=row><h2>${TN[tab]}</h2><button class=mini data-a=addsec data-tab=${tab} aria-label="Add a section">＋</button></div><p class=sub>${TSUB[tab]}</p><small>Tap − or swipe a section left to tuck it away from here. Nothing is deleted.</small>`+ts.map(([k,t])=>secRow(k,t,'rmtab')).join('')+`<button class=ghost style="width:100%;margin-top:6px" data-a=addsec data-tab=${tab}>＋ Add a section here</button>`}
+function tabp(tab){if(tab==='more')return more();const ts=ordered('t:'+tab,Object.entries(S.tr).filter(([k,t])=>inTab(t,tab)&&!t.hide)),nv=S.nv;
+ return `<div class=row><h2>${esc(nv.title[tab]||TN[tab])}</h2><button class=mini data-a=addsec data-tab=${tab} aria-label="Add a section">＋</button></div><p class=sub>${esc(nv.sub[tab]!==undefined?nv.sub[tab]:TSUB[tab])}</p><div class=chips style="margin:0 0 6px">${edBtn()}</div><small>Tap − or swipe a section left to tuck it away from here. Nothing is deleted.</small>`+ts.map(([k,t])=>secRow(k,t,'rmtab','t:'+tab)).join('')+`<button class=ghost style="width:100%;margin-top:6px" data-a=addsec data-tab=${tab}>＋ Add a section here</button>`}
 function more(){const L=(i,t,id,sub,x)=>`<div class="card trow" data-a=${x||'open'} data-id=${id}${x==='openr'?` data-p=${sub[1]}`:''}><div class=ico>${i}</div><div class=grow><b>${t}</b><br><small>${x==='openr'?sub[0]:sub}</small></div><span class=chev>›</span></div>`,ts=Object.entries(S.tr).filter(([k,t])=>inTab(t,'more')&&!t.hide);
- return `<h2>More</h2><p class=sub>Look back, make it yours, and keep your data safe.</p>
+ return `<h2>${esc(S.nv.title.more||'More')}</h2><p class=sub>Look back, make it yours, and keep your data safe.</p>
  <div class="card a1"><b>Light or dark</b><div class=chips>${thc()}</div></div>
  <h4 class=sec>Look back</h4>${L('🕘','Recent entries','recent','Search and filter everything you have recorded')}${L('📅','Calendar','cal','See your days at a glance')}${L('📖','Daily history','hist','Day by day')}${L('🌤','Weekly reflection','x',['What this week held, in your words','week'],'openr')}${L('🌙','Monthly reflection','x',['What this month held, in your words','month'],'openr')}${L('📊','Progress & insights','reports','Gentle patterns, no judgement')}
- <h4 class=sec>Make it yours</h4>${L('🗂','Card library','lib','Order, pin, hide, add and choose how many cards show')}${L('🫥','Hidden cards & sections','hidden','Bring tucked-away things back')}${L('🎛','Customise sections & fields','custom','Rename, move and change fields')}${L('⚙','App settings','settings','Your name, appearance, dashboard')}
- <h4 class=sec>Closing & inspiration</h4>${ts.map(([k,t])=>L(t.i,esc(t.n),k,'Optional · a few minutes')).join('')}${L('💬','Quote library','quotes','Favourites and your own quotes')}
+ <h4 class=sec>Make it yours</h4>${L('🎨','Personalise my LIFEBOARD','pers','Home, welcome, closing ritual, colours, icons, prompts, navigation')}${L('🗂','Card library','lib','Order, pin, hide, add and choose how many cards show')}${L('🫥','Hidden cards & sections','hidden','Bring tucked-away things back')}${L('🎛','Customise sections & fields','custom','Rename, move and change fields')}${L('⚙','App settings','settings','Your name, appearance, dashboard')}
+ <h4 class=sec>Closing & inspiration</h4>${ts.map(([k,t])=>L(esc(t.i),esc(t.n),k,t.d?esc(t.d):'Optional · a few minutes')).join('')}${L('💬','Quote library','quotes','Favourites and your own quotes')}
  <h4 class=sec>Your data</h4>${L('💾','Backup, export & import','backup','Keep your records safe')}
  <div class=card><b>AI assistants</b><p class=hint>These links only open their websites. LIFEBOARD never sends your journal anywhere.</p><div class=chips><a class=chip href="https://claude.ai" target=_blank rel=noopener>Claude</a><a class=chip href="https://chatgpt.com" target=_blank rel=noopener>ChatGPT</a><a class=chip href="https://gemini.google.com" target=_blank rel=noopener>Gemini</a></div></div>
  <button class=ghost style="width:100%" data-a=addsec data-tab=more>＋ Add a section to More</button>`}
+
+/* ---------- PERSONALISE: hub and area pages ---------- */
+const PL=(i,t,id,sub)=>`<div class="card trow" data-a=open data-id=${id}><div class=ico>${i}</div><div class=grow><b>${t}</b><br><small>${sub}</small></div><span class=chev>›</span></div>`;
+const rbtn=(a,l)=>`<button class=ghost style="width:100%;margin-top:10px" data-a=${a}>↺ ${l}</button>`;
+function pers(){return back('Personalise my LIFEBOARD')+`<p class=sub>Change almost anything here. Nothing is deleted, and every area can be restored to its default on its own.</p>`
+ +PL('🏠','A · Home screen layout','play','Order, show and hide the blocks on your home screen')+PL('👋','B · Welcome section','welset','Headings, messages, colours and extra welcome cards')+PL('🌅','C · Closing ritual & reflections','clset','Your own questions, wording, colours and cards')+PL('🗂','D · Card library','lib','Add, order, hide and recolour your cards')+PL('🎨','E · Colour & theme studio','studio','Palettes and custom colours, with a live preview')+PL('🔤','F · Icons & typography','typo','Fonts, text size and icons')+PL('💬','G · Daily prompts & quotes','gq','Quotes, questions and how they rotate')+PL('💡','H · Ideas Studio','idset','Name, sections and idea options')+PL('🧭','I · Navigation','navset','Rename, hide and reorder the bottom tabs')+rbtn('restall','Restore every personalisation to default')}
+const blkRow=b=>`<div class="card trow ed" style="${b.hide?'opacity:.65':''}"><div class=ico>${esc(b.icon||'🏠')}</div><div class=grow><b>${esc(fillT(b.title))}</b><br><small>${BT[b.type]}${b.hide?' · hidden':''}</small></div><div class=erow><button class=mini data-a=bed data-id=${b.id} aria-label="Edit">✎</button><button class=mini data-a=bup data-id=${b.id} aria-label="Move up">↑</button><button class=mini data-a=bdn data-id=${b.id} aria-label="Move down">↓</button><button class=mini data-a=bhide data-id=${b.id} aria-label="${b.hide?'Show':'Hide'}">${b.hide?'＋':'−'}</button></div></div>`;
+function play(){return back('Home screen layout')+`<p class=sub>Order your blocks. ✎ changes wording, icon and colour. − hides a block and ＋ brings it back.</p><div class=row><button class=btn data-a=addblk>＋ Add block</button><button class=ghost data-a=editHome>Edit on the home screen</button></div>`+S.home.map(blkRow).join('')+limBox()+`<div class=card><b>Closing line at the bottom</b><textarea rows=3 data-u=phil placeholder="Leave empty to hide it">${esc(S.phil||'')}</textarea></div>`+rbtn('playrest','Restore default home layout')}
+function welset(){return back('Welcome section')+`<p class=sub>Rename the greeting, write your own messages, change colours, or add more welcome sections.</p><button class=btn style="width:100%" data-a=addblk data-t=welcome>＋ Add a welcome section</button>`+S.home.filter(b=>b.type==='welcome').map(blkRow).join('')+rbtn('welrest','Restore default welcome section')}
+function clset(){const r=S.tr.ritual;return back('Closing ritual & reflections')+`<p class=sub>Create reflection cards with your own questions. All answers are optional and saved by date.</p><button class=btn style="width:100%" data-a=addblk data-t=reflect>＋ Add a reflection card</button>`+S.home.filter(b=>b.type==='reflect').map(blkRow).join('')+(r?`<div class="card trow" data-a=sed data-id=ritual><div class=ico>${esc(r.i)}</div><div class=grow><b>${esc(r.n)}</b><br><small>The full closing ritual (in More). Rename, recolour or change its questions.</small></div><span class=chev>›</span></div>`:'')+rbtn('clrest','Restore default closing ritual')}
+/* ---------- colour & theme studio (live preview, saved only when you press Save) ---------- */
+const TCK=[['bg','App background'],['ink','Text (light mode)'],['btn','Buttons'],['icon','Icons'],['prog','Progress indicators'],['nav','Bottom navigation'],['inner','Inner cards'],['prof','Profile cards'],['ideas','Ideas Studio']];
+function ensureTD(){if(!TD)TD={pal:S.pal,tc:{...S.tc},ty:{...S.ty}}}
+function tcDef(k){const p=palOf(TD.pal);return{bg:p.bg,ink:INK,btn:p.acc,icon:'#FFFFFF',prog:p.acc,nav:'#FFFFFF',inner:p.p[0],prof:p.p[0],ideas:p.p[7]}[k]}
+function tcWarn(k){const tc=TD.tc,p=palOf(TD.pal),v=tc[k];if(!v)return'';const out=(r,t)=>`<div class="${r>=4.5?'ok':'wn'}">${r>=4.5?'✓':'⚠'} ${t} ${r.toFixed(1)}:1${r>=4.5?'':'. Hard to read, try a different colour.'}</div>`;
+ if(k==='bg')return out(cr(tc.ink||INK,v),'Text on this background:');if(k==='ink')return out(cr(v,tc.bg||p.bg),'Text on the background:');
+ if(k==='btn'||k==='inner'||k==='prof'||k==='ideas')return out(cr(v,autoFg(v)),k==='btn'?'Button label:':'Text on these cards:');
+ if(k==='nav')return out(cr(tc.ink?mixc(tc.ink,tc.bg||p.bg,.25):'#665B6D',v),'Tab labels on this bar:');
+ if(k==='prog'){const r=cr(v,'#EBDDE6');return`<div class="${r>=3?'ok':'wn'}">${r>=3?'✓':'⚠'} Visibility on the progress track ${r.toFixed(1)}:1</div>`}return''}
+const tdBar=()=>`<div class="card a7 sticky"><div class=row><button class=btn data-a=tsave>Save</button><button class=ghost data-a=tdisc>Discard changes</button></div></div>`;
+function studio(){ensureTD();const tc=TD.tc;
+ return back('Colour & theme studio')+`<p class=sub>Changes preview live across the whole app. Nothing is kept until you press Save.</p><div class=card><b>Mode</b><div class=chips>${thc()}</div><small>Dark versions of your colours are designed automatically: same hue, softer and deeper.</small></div><h4 class=sec>Palettes</h4>`
+ +PAL.map(p=>`<button class="palc ${TD.pal===p.id?'on':''}" data-a=pal data-id=${p.id}><b>${p.name}</b><div class=pal>${p.p.map(c=>`<i style="background:${c}"></i>`).join('')}</div><small>${p.note}</small></button>`).join('')
+ +`<h4 class=sec>My colours</h4>`+TCK.map(([k,l])=>`<div class=card><div class=row><b>${l}</b>${tc[k]?`<button class=link data-a=tcclr data-k=${k}>Use default</button>`:'<small>Following palette</small>'}</div><div class=sty><input type=color data-u=tc data-k=${k} value="${tc[k]||tcDef(k)}" aria-label="${l}"><small>${tc[k]||'Tap to choose any colour'}</small></div><div id=tw_${k}>${tcWarn(k)}</div></div>`).join('')
+ +`<h4 class=sec>Colours for each part</h4><p class=hint>Each home block, card and section has its own colour controls. Tap one to change it.</p>`
+ +S.home.map(b=>{const[c,s]=sty(b,BDEF[b.type]);return`<div class="card trow ${c}" ${s} data-a=bed data-id=${b.id}><div class=ico>${esc(b.icon||'🏠')}</div><div class=grow><b>${esc(fillT(b.title))}</b><br><small>${BT[b.type]}</small></div><span class=chev>›</span></div>`}).join('')
+ +S.cards.map(c=>{const[cc,s]=sty(c,c.a);return`<div class="card trow ${cc}" ${s} data-a=editcard data-id=${c.id}><div class=ico>${esc(c.i)}</div><div class=grow><b>${esc(c.n)}</b><br><small>Card</small></div><span class=chev>›</span></div>`}).join('')
+ +tdBar()+rbtn('studrest','Restore default colours')}
+function typo(){ensureTD();const ty=TD.ty;
+ return back('Icons & typography')+`<p class=sub>The preview is live. Press Save to keep it.</p><div class=card><b>Heading font</b><div class=chips>${Object.entries(FONTS).map(([k,v])=>`<button class="chip ${(ty.head||'serif')===k?'on':''}" style="font-family:${v[1]}" data-a=tyh data-id=${k}>${v[0]}</button>`).join('')}</div><b style="display:block;margin-top:16px">Text size</b><div class=chips>${SIZES.map(([n,v])=>`<button class="chip ${(ty.size||1)===v?'on':''}" data-a=tys data-v=${v}>${n}</button>`).join('')}</div></div>${tdBar()}`
+ +`<h4 class=sec>Icons</h4><p class=hint>Type or paste any emoji. Icons save as you type.</p><b>Cards</b>`+S.cards.map(c=>`<div class=fr><span style="font-size:26px;width:44px;text-align:center">${esc(c.i)}</span><input value="${esc(c.i)}" maxlength=4 data-c=icoc data-id=${c.id} aria-label="Icon for ${esc(c.n)}"><small style="align-self:center;flex:1">${esc(c.n)}</small></div>`).join('')
+ +`<b style="display:block;margin-top:14px">Sections</b>`+Object.entries(S.tr).map(([k,t])=>`<div class=fr><span style="font-size:26px;width:44px;text-align:center">${esc(t.i)}</span><input value="${esc(t.i)}" maxlength=4 data-c=icot data-id=${k} aria-label="Icon for ${esc(t.n)}"><small style="align-self:center;flex:1">${esc(t.n)}</small></div>`).join('')+rbtn('tyrest','Restore default fonts & text size')}
+function gq(){const q=S.qs;return back('Daily prompts & quotes')+`<div class="card a1"><b>Daily quote</b><label>Show</label><div class=chips>${[['all','All quotes'],['fav','Favourites only'],['mine','Only my own']].map(([k,l])=>`<button class="chip ${q.src===k?'on':''}" data-a=qsrc data-id=${k}>${l}</button>`).join('')}</div><label>It changes</label><div class=chips>${[['daily','Once a day'],['random','Each time I open the app']].map(([k,l])=>`<button class="chip ${q.rot===k?'on':''}" data-a=qrot data-id=${k}>${l}</button>`).join('')}</div><button class=link data-a=open data-id=quotes>Manage my quote library ›</button></div>
+ <div class="card a4"><b>My daily questions</b><p class=hint>These appear in the Daily question block. Turn that block on in Home screen layout.</p>${S.prompts.map((p,i)=>`<div class=fr><input value="${esc(p)}" data-u=prm data-i=${i} aria-label="Question ${i+1}"><button class=mini data-a=pdel data-i=${i} aria-label="Delete">🗑</button></div>`).join('')||'<small>No questions yet.</small>'}<div class=row style="margin-top:10px"><input id=np placeholder="Write a new question"><button class=btn style="flex:none" data-a=padd>＋ Add</button></div></div>`+rbtn('gqrest','Restore default prompts & quote settings')}
+function idset(){const nv=S.nv,t=S.tr.ideas,o=k=>{const f=t.f.find(f=>f.k===k);return f?f.o.split('/').join(', '):''},ts=Object.entries(S.tr).filter(([k,x])=>inTab(x,'ideas'));
+ return back('Ideas Studio')+`<div class=card><label>Studio name (bottom tab)</label><input value="${esc(nv.label.ideas)}" data-c=nvl data-id=ideas><label>Page heading</label><input value="${esc(nv.title.ideas||TN.ideas)}" data-c=nvt data-id=ideas><label>Tagline</label><input value="${esc(nv.sub.ideas!==undefined?nv.sub.ideas:TSUB.ideas)}" data-c=nvs data-id=ideas><button class=link data-a=open data-id=studio>Change the Ideas Studio colour in the Colour studio ›</button></div>
+ <h4 class=sec>Sections in the studio</h4>`+ts.map(([k,x])=>`<div class="card trow ed" style="${x.hide?'opacity:.6':''}"><div class=ico>${esc(x.i)}</div><div class=grow><b>${esc(x.n)}</b>${x.hide?'<br><small>hidden</small>':''}</div><div class=erow><button class=mini data-a=sed data-id=${k} aria-label="Edit">✎</button><button class=mini data-a=thide data-id=${k} aria-label="${x.hide?'Show':'Hide'}">${x.hide?'＋':'−'}</button></div></div>`).join('')+`<button class=ghost style="width:100%" data-a=addsec data-tab=ideas>＋ Add a section to the studio</button>
+ <h4 class=sec>Idea options</h4><div class=card><label>Idea categories (separate with commas)</label><textarea rows=3 data-u=iopt data-k=cat>${esc(o('cat'))}</textarea><label>Statuses</label><textarea rows=2 data-u=iopt data-k=status>${esc(o('status'))}</textarea><label>Priorities</label><input data-u=iopt data-k=pri value="${esc(o('pri'))}"><label class=chk style="margin-top:14px"><input type=checkbox data-c=idone ${(t.f.find(f=>f.k==='done')||{}).h?'':'checked'}> Show the “Implemented” tick box</label></div>`+rbtn('idrest','Restore default Ideas Studio')}
+function navset(){const nv=S.nv;return back('Navigation')+`<p class=sub>Rename, reorder or hide the bottom tabs. Home and More always stay. Hidden tabs keep all their sections.</p><div class=card><label class=chk><input type=checkbox data-c=nvlab ${nv.labels?'checked':''}> Show labels under the icons</label></div>`
+ +nv.order.map((id,i)=>{const fixed=id==='home'||id==='more';return`<div class=card><div class=row><b>${esc(nv.label[id])}</b><span style="display:flex;gap:6px"><button class=mini data-a=nvmv data-id=${id} data-d=-1 aria-label="Move left">↑</button><button class=mini data-a=nvmv data-id=${id} data-d=1 aria-label="Move right">↓</button>${fixed?'':`<button class=mini data-a=nvhide data-id=${id} aria-label="${nv.hide[id]?'Show':'Hide'}">${nv.hide[id]?'＋':'−'}</button>`}</span></div>${nv.hide[id]?'<small>Hidden from the bottom bar</small>':''}<label>Tab label</label><input value="${esc(nv.label[id])}" data-c=nvl data-id=${id}>${id==='home'?'':`<label>Page heading</label><input value="${esc(nv.title[id]||TN[id]||'')}" data-c=nvt data-id=${id}>`}<label>Icon (emoji, leave empty for the default icon)</label><input value="${esc(nv.emo[id]||'')}" maxlength=4 data-c=nve data-id=${id}></div>`}).join('')+rbtn('navrest','Restore default navigation')}
+
 /* ---------- ENTRIES ---------- */
 function ent(t,e,id){const dn=t.f.find(f=>f.k==='done'&&f.t==='c'&&!f.h);let h=t.f.filter(f=>f.t!=='i'&&!(dn&&f.k==='done')&&e.v[f.k]!==undefined&&e.v[f.k]!==''&&e.v[f.k]!==false).map(f=>`<div class=kv><b>${esc(f.l)}</b>${f.t==='c'?'✓':esc(e.v[f.k])}</div>`).join('');
  t.f.forEach(f=>{if(f.t==='i'&&e.v[f.k])h+=`<img src="${esc(e.v[f.k])}" alt="">`});
@@ -229,14 +375,14 @@ function hidden(){const hc=S.cards.filter(c=>c.hide),ht=Object.entries(S.tr).fil
 function settings(){return back('App settings')+`<div class=card><label>Your name</label><input value="${esc(S.name)}" data-c=nm><label>Appearance</label><div class=chips>${thc()}</div></div>${limBox()}<div class=card><b>More</b><div class=chips><button class=chip data-a=open data-id=lib>Card library</button><button class=chip data-a=open data-id=custom>Customise sections</button><button class=chip data-a=open data-id=backup>Backup</button></div></div><p class=hint>Everything is stored only in this browser on this device. Export a backup regularly.</p>`}
 function limBox(){return `<div class="card a1"><b>Cards on my home screen</b><div class=chips>${LIMS.map(n=>`<button class="chip ${S.lim===n?'on':''}" data-a=lim data-id=${n}>${n}</button>`).join('')}<button class="chip ${!S.lim?'on':''}" data-a=lim data-id=0>All active</button></div><div class=row style="margin-top:10px"><input type=number min=1 inputmode=numeric id=lc placeholder="Custom number" value="${S.lim&&!LIMS.includes(S.lim)?S.lim:''}"><button class=btn style="flex:none" data-a=limc>Set</button></div><small>Other active cards stay available in the card library. Nothing is deleted.</small></div>`}
 function lib(){const act=ordCards().filter(c=>!c.hide);return back('Card library')+limBox()+`<div class=row style="margin-top:12px"><button class=btn data-a=newcard>＋ Add card</button><button class=ghost data-a=showcats>Restore all</button></div><p class=hint>Drag ≡ to reorder, or use ↑ ↓ ⤓. ★ pins a card to the front. Hide switches a card off and keeps its data.</p><div>${S.cards.map(c=>`<div class="card a${c.a}" data-row=${c.id}><div class=row><span class=dh data-dh aria-label="Drag to reorder">≡</span><div class=grow><b>${c.i} ${esc(c.n)}</b>${c.hide?' <small>(hidden)</small>':act.indexOf(c)>=(S.lim||99)?' <small>(not on home screen)</small>':''}${c.d?'<br><small>'+esc(c.d)+'</small>':''}</div></div><div class=chips><button class=chip data-a=cpin data-id=${c.id}>${c.pin?'★ Pinned':'☆ Pin'}</button><button class=chip data-a=cup data-id=${c.id}>↑</button><button class=chip data-a=cdn data-id=${c.id}>↓</button><button class=chip data-a=cbot data-id=${c.id}>⤓ Bottom</button><button class=chip data-a=chide data-id=${c.id}>${c.hide?'＋ Activate':'− Hide'}</button><button class=chip data-a=editcard data-id=${c.id}>✎ Edit</button></div></div>`).join('')}</div>`}
-function nj(){const c=S.nj[ymd()]||0,tot=Object.values(S.nj).reduce((a,b)=>a+b,0);return back('🕉 Naam Jap')+`<div class="card a2" style="text-align:center"><label>Mantra (optional, only you see it)</label><input value="${esc(S.njm||'')}" data-c=njm placeholder="Your own mantra"><div style="font-size:76px;font-family:Georgia,serif;margin:10px 0">${c}</div><small>today · ${tot} all-time</small><button class=btn style="width:100%;height:120px;font-size:30px;margin-top:14px" data-a=njp>Tap · +1</button><div class=row style="margin-top:10px"><button class=ghost data-a=njn>−1</button><button class=ghost data-a=nj108>+108</button><button class=ghost data-a=njr>Reset today</button></div></div><p class=hint>The count saves on this device and is included in your JSON backup.</p>`}
-function qp(){return back('Quote library')+`<div class="card a7">${qrow(dq())}</div><p class=hint>Attributions are as commonly cited. Add your own with the correct author.</p>`+Q.concat(S.cq).map(q=>`<div class=card>${qrow(q)}</div>`).join('')+`<div class=card><b>Add a quote</b><label>Quote</label><textarea id=nq rows=2></textarea><label>Author</label><input id=na><button class=btn style="width:100%;margin-top:12px" data-a=addq>Save quote</button></div>`}
+function nj(){const c=S.nj[ymd()]||0,tot=Object.values(S.nj).reduce((a,b)=>a+b,0);return back('🕉 Naam Jap')+`<div class="card a2" style="text-align:center"><label>Mantra (optional, only you see it)</label><input value="${esc(S.njm||'')}" data-c=njm placeholder="Your own mantra"><div style="font-size:76px;font-family:var(--fh);margin:10px 0">${c}</div><small>today · ${tot} all-time</small><button class=btn style="width:100%;height:120px;font-size:30px;margin-top:14px" data-a=njp>Tap · +1</button><div class=row style="margin-top:10px"><button class=ghost data-a=njn>−1</button><button class=ghost data-a=nj108>+108</button><button class=ghost data-a=njr>Reset today</button></div></div><p class=hint>The count saves on this device and is included in your JSON backup.</p>`}
+function qp(){return back('Quote library')+`<div class="card a7">${qrow(dq('all'))}</div><p class=hint>Attributions are as commonly cited. Add your own with the correct author.</p>`+Q.concat(S.cq).map(q=>`<div class=card>${qrow(q)}</div>`).join('')+`<div class=card><b>Add a quote</b><label>Quote</label><textarea id=nq rows=2></textarea><label>Author</label><input id=na><button class=btn style="width:100%;margin-top:12px" data-a=addq>Save quote</button></div>`}
 function bp(){return back('Backup & data')+`<div class=card><b>Your data lives only in this browser</b><p class=hint>LocalStorage is local to this device and browser. Clearing Safari website data can erase it, so export a backup regularly. JSON restores everything, including custom fields and cards. Save the file to Files or iCloud Drive.</p><div class=row><button class=btn data-a=expj>Export JSON</button><button class=ghost data-a=expc>Export CSV</button></div><label>Backup text (copy it, or paste a backup here to restore)</label><textarea id=bk placeholder="Backup text appears here"></textarea><input type=file accept=".json,application/json" data-c=impf style="margin-top:8px"><div class=row style="margin-top:10px"><button class=btn data-a=imp>Restore from text</button><button class=ghost data-a=wipe>Erase all</button></div><div class=row style="margin-top:10px"><button class=ghost data-a=sample>Add sample moments</button><button class=ghost data-a=unsample>Remove samples</button></div></div>`}
 /* ---------- render ---------- */
-const PG={lib,reports:rep,quotes:qp,custom:cp,backup:bp,recent,cal,hist,day:dayPage,hidden,settings,refl};
-function render(){const m=V.tr;let h;if(m){const t=S.tr[m];h=PG[m]?PG[m]():t?(t.sp==='naam'?nj():trPage(m)):home()}else if(V.card)h=cardPage(V.card);else h=V.tab==='home'?home():tabp(V.tab);
+const PG={pers,play,welset,clset,studio,typo,gq,idset,navset,lib,reports:rep,quotes:qp,custom:cp,backup:bp,recent,cal,hist,day:dayPage,hidden,settings,refl};
+function render(){if(TD&&!['studio','typo'].includes(V.tr))TD=null;applyTheme(TD||S);const m=V.tr;let h;if(m){const t=S.tr[m];h=PG[m]?PG[m]():t?(t.sp==='naam'?nj():trPage(m)):home()}else if(V.card)h=cardPage(V.card);else h=V.tab==='home'?home():tabp(V.tab);
  $('#app').innerHTML=(SOK?'':'<div class="card warn"><b>Preview mode</b><br><small>This preview may not keep entries after it closes. Your saved copy of the app keeps them permanently.</small></div>')+h;
- $('#nav').innerHTML=TABS.map(t=>`<button data-a=tab data-id=${t[0]} class="${V.tab===t[0]?'on':''}" style="--nb:var(${t[3]})"><i>${t[2]}</i>${t[1].toUpperCase()}</button>`).join('')}
+ const nv=S.nv;$('#nav').innerHTML=nv.order.filter(id=>!nv.hide[id]).map(id=>{const t=TABS.find(x=>x[0]===id);return `<button data-a=tab data-id=${id} aria-label="${esc(nv.label[id])}" class="${V.tab===id?'on':''}" style="--nb:var(${t[3]})"><i>${nv.emo[id]?esc(nv.emo[id]):t[2]}</i>${nv.labels?esc(nv.label[id]).toUpperCase():''}</button>`}).join('')}
 function sheet(h){$('#sheet').innerHTML=`<div class=ov data-a=ovc><div class=sh>${h}</div></div>`}const closeS=()=>$('#sheet').innerHTML='';
 function ask(m,f,ok='Delete'){cb=f;sheet(`<h3>Are you sure?</h3><p>${m}</p><div class=row><button class=btn data-a=yes>${ok}</button><button class=ghost data-a=close>Cancel</button></div>`)}
 /* ---------- forms ---------- */
@@ -261,8 +407,8 @@ function dl(n,x,ty){try{const a=document.createElement('a');a.href=URL.createObj
 /* ---------- actions ---------- */
 const A={},C={},U={},go=()=>{save();render()},fch=id=>{save();fm(id);render()};
 const snap=()=>({tab:V.tab,tr:V.tr,card:V.card,day:V.day,flt:V.flt,q:V.q,rp:V.rp});
-const nav2=o=>{V.st.push(snap());Object.assign(V,{flt:'all',q:''},o);render();scrollTo(0,0)};
-A.tab=d=>{V.st=[];V.tab=d.id;V.tr=null;V.card=null;V.flt='all';V.q='';render();scrollTo(0,0)};
+const nav2=o=>{V.edit=false;V.st.push(snap());Object.assign(V,{flt:'all',q:''},o);render();scrollTo(0,0)};
+A.tab=d=>{V.edit=false;V.st=[];V.tab=d.id;V.tr=null;V.card=null;V.flt='all';V.q='';render();scrollTo(0,0)};
 A.back=()=>{const p=V.st.pop();if(p)Object.assign(V,p);else{V.tr=null;V.card=null}render();scrollTo(0,0)};A.close=closeS;A.ovc=closeS;A.yes=()=>{const f=cb;closeS();f&&f()};
 A.open=d=>nav2({tr:d.id,card:null});A.ocard=d=>nav2({card:d.id,tr:null});A.openr=d=>{V.rp=d.p;nav2({tr:'refl',card:null})};A.day=d=>nav2({tr:'day',day:d.d,card:null});
 A.add=d=>openForm(d.id,null,d.d||'');A.edit=d=>openForm(d.id,d.eid);A.seg=(d,el)=>{const w=el.classList.contains('on');el.parentNode.querySelectorAll('button').forEach(b=>b.classList.remove('on'));if(!w)el.classList.add('on')};
@@ -333,7 +479,96 @@ C.impf=el=>{const r=new FileReader();r.onload=()=>{$('#bk').value=r.result};if(e
 A.imp=()=>{let j;try{j=JSON.parse($('#bk').value)}catch(e){return toast('That is not a valid backup')}if(!j||j.v!==1||!j.e||!j.tr)return toast('Not a LIFEBOARD backup');ask('Replace everything currently in the app with this backup?',()=>{S=init(j);theme();V={tab:'home',tr:null,card:null,flt:'all',rp:'week',q:'',st:[],day:null,rc:'',rd:'',cm:null};go();toast('Restored')},'Restore')};
 A.sample=()=>{const n=Date.now(),P=[['ideas',0,{title:'Dairy-free hazelnut truffle',desc:'I would like to create a silky dairy-free truffle with roasted hazelnuts',cat:'Chocolate business',pri:'High',status:'Exploring',next:'Test the coconut cream ratio',done:false}],['ideas',1,{title:'Sunday art evening',desc:'I would like to paint with my children every Sunday',cat:'Children',pri:'Medium',status:'Completed',done:true}],['meals',0,{meal:'Breakfast',food:'Oats with berries',qty:'1 bowl'}],['move',1,{kind:'Yoga',min:'25',after:'Calm'}],['move',2,{kind:'Walking',min:'30'}],['read',0,{title:'Sample book',pages:'12',min:'20'}],['reflect',3,{kind:'Free writing',title:'A quiet evening',text:'Slowing down helped.'}],['inner',2,{emotion:'Grateful',trigger:'Call with parents'}],['people',1,{person:'Sample: Mum',rel:'Mother',listen:'Yes',moment:'A long phone call'}]];P.forEach((p,i)=>S.e.push({id:n+i,t:p[0],d:ago(p[1]),v:p[2],s:1}));go();toast('Sample moments added')};
 A.unsample=()=>ask('Remove the sample entries? Your own entries are not touched.',()=>{S.e=S.e.filter(e=>!e.s);go()},'Remove');
-A.wipe=()=>ask('Erase ALL LIFEBOARD data on this device? Export a backup first.',()=>{S=init({v:1,name:S.name,tr:{},e:[]});S.th='light';theme();go()},'Erase all');
+A.wipe=()=>ask('Erase ALL LIFEBOARD data on this device? Export a backup first.',()=>{S=init({v:1,name:S.name,tr:{},e:[]});S.th='dark';theme();go()},'Erase all');
+/* ---------- EDITORS: one sheet for blocks, cards and sections (draft, live preview, Save) ---------- */
+let DR=null,ED=null,TD=null;
+const jc=o=>JSON.parse(JSON.stringify(o));
+const defOf=(kind,id)=>{if(kind==='b')return DBL().find(b=>b.id===id);if(kind==='c')return DC.find(c=>String(c.id)===String(id));const d=DD[id];return d?{n:d[1],i:d[2],d:'',a:-1}:null};
+const edObj=()=>ED.kind==='b'?S.home.find(b=>b.id===ED.id):ED.kind==='c'?gc(ED.id):S.tr[ED.id];
+const edNm=()=>ED.kind==='b'?'title':'n';
+function colUI(){const o=DR,sw=SW.map((n,i)=>`<button class=chip style="background:var(--p${i});color:var(--ink0);${!o.col&&o.a===i?'outline:3px solid var(--acc)':''}" data-a=dsw data-i=${i}>${n}</button>`).join(''),cu=o.col&&isHex(o.col.bg),bg=cu?o.col.bg:'#F8DCE8',fg=cu&&isHex(o.col.fg)?o.col.fg:autoFg(bg);
+ return `<label>Colour</label><div class=chips>${ED.kind!=='c'?`<button class=chip style="${!o.col&&(o.a===-1||o.a===undefined)?'outline:3px solid var(--acc)':''}" data-a=dsw data-i=-1>Default</button>`:''}${sw}</div>
+ <div class=sty><input type=color value="${bg}" data-u=dcol data-k=bg aria-label="Background colour"><small>Background${cu?'':' (tap to choose your own)'}</small></div>
+ <div class=sty><input type=color value="${fg}" data-u=dcol data-k=fg aria-label="Text colour"><small>Text colour (light mode)</small></div>
+ <div id=dwarn>${dwarn()}</div><small>Dark mode gets its own softer, deeper version of this colour, with readable text chosen automatically.</small>`+(cu?`<br><button class=link data-a=dcclr>Remove my custom colour</button>`:'')}
+function dwarn(){const o=DR;if(!(o.col&&isHex(o.col.bg)))return'';const bg=o.col.bg,fg=isHex(o.col.fg)?o.col.fg:autoFg(bg),r=cr(bg,fg);return r>=4.5?`<div class=ok>✓ Text is easy to read on this colour (${r.toFixed(1)}:1)</div>`:`<div class=wn>⚠ Hard to read (${r.toFixed(1)}:1). Pick a darker text colour or a lighter background.${o.col.fg?'':''}</div>`}
+function pvHtml(){if(ED.kind==='b')return blkBody(DR,true);if(ED.kind==='c'){const[c,s]=sty(DR,DR.a);return `<div class="tile ${c}" ${s}><span class=ti>${esc(DR.i)}</span><b>${esc(DR.n)}</b><small>${esc(DR.d||'')}</small></div>`}const[c,s]=sty(DR,0);return `<div class="card trow ${c}" ${s}><div class=ico>${esc(DR.i)}</div><div class=grow><b>${esc(DR.n)}</b><br><small>${esc(DR.d||'')}</small></div></div>`}
+const emoUI=()=>`<label>Icon (any emoji, or leave empty)</label><input value="${esc(DR.i!==undefined?DR.i:DR.icon||'')}" maxlength=4 data-u=dk data-k=${ED.kind==='b'?'icon':'i'} aria-label="Icon"><div class=chips>${EMO.map(e=>`<button class=chip data-a=demo data-v="${e}" style="min-width:44px">${e}</button>`).join('')}</div>`;
+const chp=(k,opts)=>`<div class=chips>${opts.map(([v,l])=>`<button class="chip ${String(DR[k])===String(v)?'on':''}" data-a=dset data-k=${k} data-v="${v}">${l}</button>`).join('')}</div>`;
+function edSheet(){const o=DR,k=ED.kind,t=o.type;let h=`<h3>${k==='b'?'Edit '+BT[t].toLowerCase():k==='c'?'Edit card':'Edit section'}</h3><div class=prevw id=pvw>${pvHtml()}</div>`;
+ h+=`<label>${k==='b'?'Heading':'Name'}</label><input value="${esc(k==='b'?o.title:o.n)}" data-u=dk data-k=${edNm()} placeholder="Use {name} for your name">`;
+ if(k!=='b'||['inspire','reflect','intent','prompt'].includes(t))h+=`<label>Description</label><input value="${esc(o.d!==undefined&&k!=='b'?o.d:o.desc||'')}" data-u=dk data-k=${k==='b'?'desc':'d'}>`;
+ h+=emoUI();
+ if(k==='b'){
+  if(t==='welcome')h+=`<label>Messages (one per line)</label><textarea rows=5 data-u=dk data-k=msgs>${esc((o.msgs||[]).join('\n'))}</textarea><label>Messages change</label>${chp('mode',[['daily','Once a day'],['random','Each time I open'],['static','Always the first one']])}<label>Alignment</label>${chp('align',[['left','Left'],['center','Centred']])}<label>Heading size</label>${chp('size',[['s','Smaller'],['m','Medium'],['l','Larger']])}<label class=chk><input type=checkbox data-c=dchk data-k=showDate ${o.showDate!==0?'checked':''}> Show today’s date</label><label class=chk><input type=checkbox data-c=dchk data-k=showHi ${o.showHi!==0?'checked':''}> Show “Good morning, ${esc(S.name)}”</label><small>Greeting examples: Hello, beautiful soul! · Welcome to your space. · My Morning Space · {greeting}, {name}</small>`;
+  if(t==='intent')h+=`<label>How many lines</label>${chp('n',[[1,'1'],[2,'2'],[3,'3']])}<label>Hints (one per line)</label><textarea rows=3 data-u=dk data-k=ph>${esc((o.ph||[]).join('\n'))}</textarea><label>Small note under the lines</label><input value="${esc(o.note||'')}" data-u=dk data-k=note>`;
+  if(t==='inspire')h+=`<label>Which quotes</label>${chp('src',[['all','All'],['fav','Favourites'],['mine','My own']])}`;
+  if(t==='note')h+=`<label>Text</label><textarea rows=5 data-u=dk data-k=text>${esc(o.text||'')}</textarea>`;
+  if(t==='reflect')h+=`<label>Questions (all answers are optional)</label>`+(o.qs||[]).map((q,i)=>`<div class="fr ${q.h?'off':''}"><input value="${esc(q.q)}" data-u=dqq data-i=${i} aria-label="Question ${i+1}"><button class=mini data-a=qmv data-i=${i} data-d=-1 aria-label="Up">↑</button><button class=mini data-a=qmv data-i=${i} data-d=1 aria-label="Down">↓</button><button class=mini data-a=qhide data-i=${i} aria-label="${q.h?'Show':'Hide'}">${q.h?'＋':'−'}</button></div>`).join('')+`<div class=row style="margin-top:8px"><input id=nq2 placeholder="Write a new question"><button class=btn style="flex:none" data-a=qadd>＋ Add</button></div><small>Hiding or removing a question never deletes answers you already wrote.</small><label class=chk><input type=checkbox data-c=dchk data-k=link ${o.link?'checked':''}> Link to the full Closing Ritual</label>`}
+ h+=colUI();
+ h+=`<div class=row style="margin-top:18px"><button class=btn data-a=edsave>Save</button><button class=ghost data-a=close>Cancel</button></div>`;
+ if(defOf(k,ED.id))h+=`<button class=ghost style="width:100%;margin-top:10px" data-a=edrest>↺ Restore default for this ${k==='b'?'block':k==='c'?'card':'section'}</button>`;
+ if(k==='t')h+=`<div class=chips><button class=chip data-a=fm data-id=${ED.id}>Fields</button><button class=chip data-a=thide data-id=${ED.id}>${edObj().hide?'＋ Show':'− Hide'}</button></div>`;
+ if(k==='b'&&!DBL().some(b=>b.id===ED.id))h+=`<button class=ghost style="width:100%;margin-top:10px" data-a=bdel>🗑 Delete this block</button>`;
+ sheet(h)}
+const edOpen=(kind,id)=>{ED={kind,id};const src=kind==='b'?S.home.find(b=>b.id===id):kind==='c'?gc(id):S.tr[id];if(!src)return;DR=jc(src);if(kind!=='b'&&DR.a===undefined)DR.a=kind==='c'?0:-1;if(kind==='t'&&DR.a===undefined)DR.a=-1;edSheet()};
+const pvUp=()=>{const p=$('#pvw');if(p)p.innerHTML=pvHtml();const w=$('#dwarn');if(w)w.innerHTML=dwarn()};
+A.bed=d=>edOpen('b',d.id);A.editcard=d=>edOpen('c',d.id);A.sed=d=>edOpen('t',d.id);
+U.dk=el=>{const k=el.dataset.k;if(k==='msgs'||k==='ph')DR[k]=el.value.split('\n');else DR[k]=el.value;pvUp()};
+U.dqq=el=>{DR.qs[+el.dataset.i].q=el.value;pvUp()};
+U.dcol=el=>{DR.col=Object.assign({bg:'#F8DCE8'},DR.col||{});DR.col[el.dataset.k]=el.value;if(el.dataset.k==='fg')DR.col.fgSet=1;pvUp()};
+C.dchk=el=>{DR[el.dataset.k]=el.checked?1:0;pvUp()};
+A.dsw=d=>{DR.a=+d.i;delete DR.col;edSheet()};A.dcclr=()=>{delete DR.col;edSheet()};
+A.dset=d=>{DR[d.k]=isNaN(d.v)||d.v===''?d.v:+d.v;edSheet()};A.demo=d=>{DR[ED.kind==='b'?'icon':'i']=d.v;edSheet()};
+A.qadd=()=>{const v=($('#nq2').value||'').trim();if(!v)return toast('Write the question first');DR.qs.push({id:'q'+Date.now().toString(36),q:v});edSheet()};
+A.qmv=d=>{const a=DR.qs,i=+d.i,j=i+ +d.d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];edSheet()};A.qhide=d=>{const q=DR.qs[+d.i];q.h=q.h?0:1;edSheet()};
+function fixCol(o){if(o.col){if(!isHex(o.col.bg))delete o.col;else if(!o.col.fgSet)delete o.col.fg;else delete o.col.fgSet}}
+A.edsave=()=>{const o=edObj(),k=ED.kind;if(!o)return closeS();fixCol(DR);const nm=edNm(),keys=k==='b'?null:['n','i','d','a','col'];
+ if(!String(DR[nm]||'').trim()&&k!=='b')return toast('Give it a name');
+ if(k==='b'){Object.keys(o).forEach(x=>{if(x!=='id'&&x!=='type')delete o[x]});Object.assign(o,jc(DR));if(!o.col)delete o.col;if(o.type==='reflect')o.qs=(o.qs||[]).filter(q=>String(q.q).trim())}
+ else{keys.forEach(x=>{if(DR[x]===undefined||(x==='col'&&!DR.col))delete o[x];else o[x]=jc(DR[x])});if(o.a===-1&&k==='t')delete o.a;if(!o.d)delete o.d}
+ closeS();go();toast('Saved')};
+A.edrest=()=>{const k=ED.kind,id=ED.id,df=defOf(k,id);ask('Restore this '+(k==='b'?'block':k==='c'?'card':'section')+' to its default look and wording? Your entries and answers are not touched.',()=>{const o=edObj();if(k==='b'){const i=S.home.findIndex(b=>b.id===id),keep=o.hide;S.home[i]=Object.assign(DBL().find(b=>b.id===id),{hide:keep})}else{delete o.col;delete o.d;if(k==='c'){Object.assign(o,jc(df))}else{o.n=df.n;o.i=df.i;delete o.a}}closeS();go();toast('Restored')},'Restore')};
+A.bdel=()=>ask('Delete this block from your home screen? Answers you already saved stay in your data.',()=>{S.home=S.home.filter(b=>b.id!==ED.id);closeS();go()});
+/* home blocks */
+A.etog=()=>{V.edit=!V.edit;render()};A.editHome=()=>{V.edit=true;V.st=[];V.tab='home';V.tr=null;V.card=null;render();scrollTo(0,0)};
+const bmv=(id,d)=>{const a=S.home,i=a.findIndex(b=>b.id===id),j=i+d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];go()};A.bup=d=>bmv(d.id,-1);A.bdn=d=>bmv(d.id,1);
+A.bhide=d=>{const b=S.home.find(x=>x.id===d.id);b.hide=b.hide?0:1;go()};
+function newBlk(t){const id=newId(),base={welcome:{title:'Hello, {name}!',msgs:['A new day, a new possibility.'],mode:'daily',align:'left',size:'m',showDate:1,showHi:1,icon:'🌸'},reflect:{title:'A moment to reflect',desc:'',icon:'🌙',a:2,link:0,qs:[{id:'q'+Date.now().toString(36),q:'What would I like to remember about today?'}]},intent:{title:'Today, I want to…',n:2,ph:['',''],note:'',a:7},inspire:{title:'A thought for today',icon:'💬',a:1,src:'all'},prompt:{title:'A gentle question',icon:'🌼',a:4},note:{title:'A note to myself',text:'Write anything you would like to see here.',icon:'✨',a:5}}[t];return Object.assign({id,type:t,hide:0},base)}
+A.addblk=d=>{if(d.t)return A.mkblk({t:d.t});sheet(`<h3>Add a block to your home screen</h3><div class=chips style="flex-direction:column">${['welcome','reflect','intent','inspire','prompt','note'].map(t=>`<button class=chip style="text-align:left" data-a=mkblk data-t=${t}><b>${BT[t]}</b></button>`).join('')}</div><button class=ghost style="width:100%;margin-top:12px" data-a=close>Cancel</button>`)};
+A.mkblk=d=>{const b=newBlk(d.t);let i=S.home.findIndex(x=>x.type==='cards');if(i<0)i=S.home.length;S.home.splice(d.t==='welcome'?S.home.findIndex(x=>x.type==='welcome')+1||0:i,0,b);save();closeS();render();edOpen('b',b.id)};
+/* sections: personal order inside a card or area */
+function ctxIds(key){const[a,id]=[key.slice(0,1),key.slice(2)];const ts=a==='c'?cts(id):Object.entries(S.tr).filter(([k,t])=>inTab(t,id)&&!t.hide);return ordered(key,ts).map(x=>x[0])}
+A.smv=d=>{const ids=ctxIds(d.key),i=ids.indexOf(d.id),j=i+ +d.d;if(j<0||j>=ids.length)return;[ids[i],ids[j]]=[ids[j],ids[i]];S.ord[d.key]=ids;go()};
+/* studio */
+A.pal=d=>{ensureTD();TD.pal=d.id;applyTheme(TD);render()};
+U.tc=el=>{ensureTD();TD.tc[el.dataset.k]=el.value;applyTheme(TD);const w=$('#tw_'+el.dataset.k);if(w)w.innerHTML=tcWarn(el.dataset.k);if(el.dataset.k==='bg'||el.dataset.k==='ink'){const o=$('#tw_bg'),p=$('#tw_ink');if(o)o.innerHTML=tcWarn('bg');if(p)p.innerHTML=tcWarn('ink')}};
+A.tcclr=d=>{ensureTD();delete TD.tc[d.k];applyTheme(TD);render()};
+A.tsave=()=>{ensureTD();S.pal=TD.pal;S.tc={...TD.tc};S.ty={...TD.ty};TD=null;applyTheme(S);go();toast('Saved')};A.tdisc=()=>{TD=null;applyTheme(S);render();toast('Changes discarded')};
+A.studrest=()=>ask('Restore the default palette and colours?',()=>{S.pal='pinklav';S.tc={};TD=null;applyTheme(S);go()},'Restore');
+A.tyh=d=>{ensureTD();TD.ty.head=d.id;applyTheme(TD);render()};A.tys=d=>{ensureTD();TD.ty.size=+d.v;applyTheme(TD);render()};
+A.tyrest=()=>ask('Restore the default font and text size?',()=>{S.ty={};TD=null;applyTheme(S);go()},'Restore');
+C.icoc=el=>{gc(el.dataset.id).i=el.value||'✦';go()};C.icot=el=>{S.tr[el.dataset.id].i=el.value||'✦';go()};
+/* prompts and quotes */
+A.qsrc=d=>{S.qs.src=d.id;go()};A.qrot=d=>{S.qs.rot=d.id;go()};U.prm=el=>{S.prompts[+el.dataset.i]=el.value};
+A.pdel=d=>{S.prompts.splice(+d.i,1);go()};A.padd=()=>{const v=($('#np').value||'').trim();if(!v)return toast('Write a question first');S.prompts.push(v);go()};A.pnext=()=>{V.pi=(V.pi||0)+1;render()};
+U.pa=el=>{const q=curPrompt(),k=ymd();S.pa[k]=S.pa[k]||{};S.pa[k][q]=el.value};
+A.gqrest=()=>ask('Restore the default questions and quote settings?',()=>{S.prompts=DP.slice();S.qs={src:'all',rot:'daily'};go()},'Restore');
+U.phil=el=>{S.phil=el.value};
+/* ideas studio */
+U.iopt=el=>{const f=S.tr.ideas.f.find(f=>f.k===el.dataset.k);if(f)f.o=el.value.split(/[,\n]/).map(x=>x.replace(/\//g,'-').trim()).filter(Boolean).join('/')};
+C.idone=el=>{const f=S.tr.ideas.f.find(f=>f.k==='done');if(f)f.h=el.checked?0:1;go()};
+A.idrest=()=>ask('Restore the default Ideas Studio wording and options?',()=>{const df=mk(DD.ideas);S.tr.ideas.f.forEach(f=>{const x=df.find(y=>y.k===f.k);if(x){f.o=x.o;f.l=x.l;if(f.k==='done')f.h=0}});delete S.nv.label.ideas;delete S.nv.title.ideas;delete S.nv.sub.ideas;go()},'Restore');
+/* navigation */
+C.nvl=el=>{S.nv.label[el.dataset.id]=el.value.trim()||DEFNAV().label[el.dataset.id];go()};C.nvt=el=>{S.nv.title[el.dataset.id]=el.value.trim()||TN[el.dataset.id];go()};C.nvs=el=>{S.nv.sub[el.dataset.id]=el.value;go()};C.nve=el=>{S.nv.emo[el.dataset.id]=el.value.trim();go()};C.nvlab=el=>{S.nv.labels=el.checked?1:0;go()};
+A.nvmv=d=>{const a=S.nv.order,i=a.indexOf(d.id),j=i+ +d.d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];go()};A.nvhide=d=>{S.nv.hide[d.id]=S.nv.hide[d.id]?0:1;go()};
+A.navrest=()=>ask('Restore the default tab names, order and icons?',()=>{S.nv=DEFNAV();go()},'Restore');
+/* restore defaults for each area */
+A.playrest=()=>ask('Restore the default home layout? Your wording and colours on home blocks go back to default too.',()=>{S.home=DBL();S.phil=PHIL;go()},'Restore');
+A.welrest=()=>ask('Restore the default welcome section? Extra welcome sections are removed.',()=>{const w=DBL()[0],i=S.home.findIndex(b=>b.type==='welcome');S.home=S.home.filter(b=>b.type!=='welcome');S.home.splice(Math.max(i,0),0,w);go()},'Restore');
+A.clrest=()=>ask('Restore the default closing ritual? Answers you already wrote are kept.',()=>{const d=DBL().find(b=>b.id==='closing'),i=S.home.findIndex(b=>b.id==='closing');if(i<0)S.home.push(d);else S.home[i]=d;const r=S.tr.ritual,df=DD.ritual;if(r){r.n=df[1];r.i=df[2];delete r.col;delete r.a;delete r.d}go()},'Restore');
+A.restall=()=>ask('Restore every personalisation to its default (colours, wording, home layout, tabs, prompts)? Your entries, answers and your own cards and sections are kept.',()=>{S.pal='pinklav';S.tc={};S.ty={};S.home=DBL();S.phil=PHIL;S.nv=DEFNAV();S.prompts=DP.slice();S.qs={src:'all',rot:'daily'};S.ord={};TD=null;S.cards.forEach(c=>{delete c.col;const d=DC.find(x=>x.id===c.id);if(d)Object.assign(c,d)});Object.entries(S.tr).forEach(([k,t])=>{delete t.col;delete t.a;delete t.d;if(DD[k]){t.n=DD[k][1];t.i=DD[k][2]}});S.th='dark';theme();go()},'Restore all');
+
 /* event delegation */
 document.addEventListener('click',ev=>{const el=ev.target.closest('[data-a]');if(!el)return;if(el.dataset.a==='ovc'&&ev.target!==el)return;const f=A[el.dataset.a];f&&f(el.dataset,el)});
 document.addEventListener('keydown',ev=>{if((ev.key==='Enter'||ev.key===' ')&&ev.target.matches('[role=button][data-a]')){ev.preventDefault();ev.target.click()}});
